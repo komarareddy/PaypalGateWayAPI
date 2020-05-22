@@ -2,6 +2,7 @@
 Paypal Payment gateway provides Dot Net Core SDK, by using that SDK we can implement payment gateway in asp.net core WEB API
 
 How a SDK integration works
+
 1.Set up the payment
 
    Your buyer clicks the a button in HTML.
@@ -24,7 +25,7 @@ How a SDK integration works
   
   You show a payment receipt page to the buyer.
   
-  
+ ------------------------------------------------------------------- 
   In ASP.Net Core WEB API
   
 Step 1 : Instal PaypalCore SDk from NuGet Package 
