@@ -29,4 +29,5 @@ How a server integration works
 In ASP.Net Core WEB API
 Step 1 : Instal PaypalCore SDk from NuGet Package 
 Step 2 : Store clientId and clientSecret in Appsettings(you can get it from paypal website)
-step 3 :
+step 3 : Create Two API's End 1.CreatePayment 2.ExecutePayment
+step 4 : Call 'CreatePayment' from front end
