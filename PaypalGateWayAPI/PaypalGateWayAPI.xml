@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PaypalGateWayAPI</name>
+    </assembly>
+    <members>
+        <member name="M:PaypalGateWayAPI.Controllers.PaymentController.CreatePayment(PaypalGateWayAPI.PaymentViewModel)">
+            <summary>
+            Create A new payment resource
+            </summary>
+            <returns></returns>
+            <returns>A response with new customer</returns>
+            <response code="201">A response as creation of customer</response>
+            <response code="400">For bad request</response>
+            <response code="500">If there was an internal server error</response>
+        </member>
+    </members>
+</doc>

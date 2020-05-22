@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Payment Details</title>
+
+    <script>
+        const uri = 'api/Payment/CreatePayment';
+
+        function payment() {
+
+            const item = {
+                "items": [
+                    {
+                        "name": "Product1",
+                        "description": "Transaction description.",
+                        "quantity": 1,
+                        "price": 30
+                    }
+                ],
+                "shipping_Address": {
+                    "recipient_Name": "Kumara",
+                    "line1": "Mysore",
+                    "line2": "Hebbal",
+                    "city": "Mysore",
+                    "postal_code": "12345",
+                    "phone": "326457912",
+                    "state": "KA"
+                },
+                "tax": 0,
+                "shippingCharge": 20,
+                "subTotal": 30,
+                "currency": "INR"
+            };
+
+            fetch(uri, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(item)
+            })
+                .then(res => res.text())
+                .then(text =>
+                  
+                    window.location = text
+                    )
+                .catch(error =>
+                    alert(error)
+                );
+        }
+
+
+    </script>
+
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<body>
+    <form action="javascript:void(0);" method="POST" onsubmit="payment()">
+        <h2>Pay Through Paypal</h2>
+       
+        <table >
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Product Amount</th>
+                    <th>Product Quantity</th>
+                    <th>Shipping Charge</th>
+                    <th>Product Tax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Product1</td>
+                    <td>30</td>
+                    <td>1</td>
+                    <td>20</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table><br />
+        <span>Total Amount : 50</span><br />
+        <input type="submit" style="cursor:" value="CheckOut">
+    </form>
+</body>
+</html>
